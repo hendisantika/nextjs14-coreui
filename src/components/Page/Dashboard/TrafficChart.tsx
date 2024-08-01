@@ -2,7 +2,16 @@
 
 import {Line} from 'react-chartjs-2'
 import React from 'react'
-import {BarElement, CategoryScale, Chart, Filler, LinearScale, LineElement, PointElement, Tooltip,} from 'chart.js'
+import {
+    BarElement,
+    CategoryScale,
+    Chart,
+    Filler,
+    LinearScale,
+    LineElement,
+    PointElement,
+    Tooltip,
+} from 'chart.js'
 import useDictionary from '@/locales/dictionary-hook'
 import useComputedStyle from '@/hooks/use-computed-style'
 

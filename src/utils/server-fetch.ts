@@ -22,7 +22,10 @@ export default async function serverFetch(...args: FetchArguments): Promise<Resp
             // eslint-disable-next-line no-await-in-loop
             const response = await fetch(
                 args[0],
-                {...args[1], signal: AbortSignal.timeout(timeout)},
+                {
+                    ...args[1],
+                    signal: AbortSignal.timeout(timeout)
+                },
             )
 
             if (!response.ok) {

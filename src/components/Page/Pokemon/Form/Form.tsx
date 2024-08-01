@@ -1,7 +1,17 @@
 'use client'
 
 import {useFormState, useFormStatus} from 'react-dom'
-import {Alert, Button, Col, Form as BSForm, FormCheck, FormControl, FormGroup, FormLabel, Row,} from 'react-bootstrap'
+import {
+    Alert,
+    Button,
+    Col,
+    Form as BSForm,
+    FormCheck,
+    FormControl,
+    FormGroup,
+    FormLabel,
+    Row,
+} from 'react-bootstrap'
 import React, {useEffect} from 'react'
 import classNames from 'classnames'
 import Image from 'next/image'

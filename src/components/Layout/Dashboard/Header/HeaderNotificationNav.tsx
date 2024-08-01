@@ -34,7 +34,10 @@ type ItemWithIconProps = {
 } & PropsWithChildren
 
 const ItemWithIcon = (props: ItemWithIconProps) => {
-    const {icon, children} = props
+    const {
+        icon,
+        children
+    } = props
 
     return (
         <>
@@ -50,10 +53,12 @@ export default async function HeaderNotificationNav() {
         <Nav>
             <NavItem className="d-none d-sm-block">
                 <Dropdown>
-                    <DropdownToggle className="px-2 mx-1 px-sm-3 mx-sm-0" as={NavLink} bsPrefix="hide-caret"
+                    <DropdownToggle className="px-2 mx-1 px-sm-3 mx-sm-0" as={NavLink}
+                                    bsPrefix="hide-caret"
                                     id="dropdown-notification">
                         <FontAwesomeIcon icon={faBell} size="lg"/>
-                        <Badge pill bg="danger" className="position-absolute top-0 end-0 px-1 px-sm-2">
+                        <Badge pill bg="danger"
+                               className="position-absolute top-0 end-0 px-1 px-sm-2">
                             5
                         </Badge>
                     </DropdownToggle>
@@ -96,12 +101,14 @@ export default async function HeaderNotificationNav() {
                             </DropdownItem>
                         </Link>
 
-                        <DropdownHeader className="fw-bold">{dict.notification.server.title}</DropdownHeader>
+                        <DropdownHeader
+                            className="fw-bold">{dict.notification.server.title}</DropdownHeader>
 
                         <Link href="#" passHref legacyBehavior>
                             <DropdownItem>
                                 <small>
-                                    <div className="text-uppercase"><b>{dict.notification.server.items.cpu}</b></div>
+                                    <div className="text-uppercase">
+                                        <b>{dict.notification.server.items.cpu}</b></div>
                                 </small>
                                 <ProgressBar
                                     className="progress-thin mt-2"
@@ -122,7 +129,8 @@ export default async function HeaderNotificationNav() {
                         <Link href="#" passHref legacyBehavior>
                             <DropdownItem>
                                 <small>
-                                    <div className="text-uppercase"><b>{dict.notification.server.items.memory}</b></div>
+                                    <div className="text-uppercase">
+                                        <b>{dict.notification.server.items.memory}</b></div>
                                 </small>
                                 <ProgressBar
                                     className="progress-thin mt-2"
@@ -137,7 +145,8 @@ export default async function HeaderNotificationNav() {
                         <Link href="#" passHref legacyBehavior>
                             <DropdownItem>
                                 <small>
-                                    <div className="text-uppercase"><b>{dict.notification.server.items.ssd1}</b></div>
+                                    <div className="text-uppercase">
+                                        <b>{dict.notification.server.items.ssd1}</b></div>
                                 </small>
                                 <ProgressBar
                                     className="progress-thin mt-2"
@@ -154,10 +163,12 @@ export default async function HeaderNotificationNav() {
             </NavItem>
             <NavItem className="d-none d-sm-block">
                 <Dropdown>
-                    <DropdownToggle className="px-2 mx-1 px-sm-3 mx-sm-0" as={NavLink} bsPrefix="hide-caret"
+                    <DropdownToggle className="px-2 mx-1 px-sm-3 mx-sm-0" as={NavLink}
+                                    bsPrefix="hide-caret"
                                     id="dropdown-task">
                         <FontAwesomeIcon icon={faList} size="lg"/>
-                        <Badge pill bg="warning" className="position-absolute top-0 end-0 px-1 px-sm-2">
+                        <Badge pill bg="warning"
+                               className="position-absolute top-0 end-0 px-1 px-sm-2">
                             5
                         </Badge>
                     </DropdownToggle>
@@ -234,7 +245,8 @@ export default async function HeaderNotificationNav() {
                         <DropdownDivider/>
 
                         <Link href="#" passHref legacyBehavior>
-                            <DropdownItem className="text-center fw-bold">{dict.task.view_all}</DropdownItem>
+                            <DropdownItem
+                                className="text-center fw-bold">{dict.task.view_all}</DropdownItem>
                         </Link>
 
                     </DropdownMenu>
@@ -242,10 +254,12 @@ export default async function HeaderNotificationNav() {
             </NavItem>
             <NavItem className="d-none d-sm-block">
                 <Dropdown>
-                    <DropdownToggle className="px-2 mx-1 px-sm-3 mx-sm-0" as={NavLink} bsPrefix="hide-caret"
+                    <DropdownToggle className="px-2 mx-1 px-sm-3 mx-sm-0" as={NavLink}
+                                    bsPrefix="hide-caret"
                                     id="dropdown-mail">
                         <FontAwesomeIcon icon={faEnvelope} size="lg"/>
-                        <Badge pill bg="primary" className="position-absolute top-0 end-0 px-1 px-sm-2">
+                        <Badge pill bg="primary"
+                               className="position-absolute top-0 end-0 px-1 px-sm-2">
                             7
                         </Badge>
                     </DropdownToggle>
@@ -269,7 +283,8 @@ export default async function HeaderNotificationNav() {
                                         </div>
                                     </div>
                                     <div>
-                                        <small className="text-muted">{dict.messages.items.item1.user}</small>
+                                        <small
+                                            className="text-muted">{dict.messages.items.item1.user}</small>
                                         <small
                                             className="text-muted float-end mt-1">{dict.messages.items.item1.time}</small>
                                     </div>
@@ -301,7 +316,8 @@ export default async function HeaderNotificationNav() {
                                         </div>
                                     </div>
                                     <div>
-                                        <small className="text-muted">{dict.messages.items.item2.user}</small>
+                                        <small
+                                            className="text-muted">{dict.messages.items.item2.user}</small>
                                         <small
                                             className="text-muted float-end mt-1">{dict.messages.items.item2.time}</small>
                                     </div>
@@ -331,7 +347,8 @@ export default async function HeaderNotificationNav() {
                                         </div>
                                     </div>
                                     <div>
-                                        <small className="text-muted">{dict.messages.items.item3.user}</small>
+                                        <small
+                                            className="text-muted">{dict.messages.items.item3.user}</small>
                                         <small
                                             className="text-muted float-end mt-1">{dict.messages.items.item3.time}</small>
                                     </div>
@@ -361,7 +378,8 @@ export default async function HeaderNotificationNav() {
                                         </div>
                                     </div>
                                     <div>
-                                        <small className="text-muted">{dict.messages.items.item4.user}</small>
+                                        <small
+                                            className="text-muted">{dict.messages.items.item4.user}</small>
                                         <small
                                             className="text-muted float-end mt-1">{dict.messages.items.item4.time}</small>
                                     </div>

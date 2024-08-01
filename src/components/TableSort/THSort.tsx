@@ -11,7 +11,8 @@ type Props = {
 
 export default function THSort(props: Props) {
     const {
-        name, children,
+        name,
+        children,
     } = props
     const router = useRouter()
     const pathname = usePathname()
@@ -40,7 +41,8 @@ export default function THSort(props: Props) {
     }
 
     return (
-        <a className="text-decoration-none" role="button" tabIndex={0} onClick={onClick} onKeyDown={onClick}>
+        <a className="text-decoration-none" role="button" tabIndex={0} onClick={onClick}
+           onKeyDown={onClick}>
             {children}
             <FontAwesomeIcon icon={getIcon()} fixedWidth size="xs"/>
         </a>

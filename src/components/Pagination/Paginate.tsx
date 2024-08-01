@@ -10,7 +10,10 @@ type Props = {
 }
 
 export default function Paginate(props: Props) {
-    const {currentPage, lastPage} = props
+    const {
+        currentPage,
+        lastPage
+    } = props
     const [pageIndex, setPageIndex] = useState(currentPage - 1)
     const router = useRouter()
     const pathname = usePathname()

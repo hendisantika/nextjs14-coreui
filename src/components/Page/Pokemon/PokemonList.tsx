@@ -26,14 +26,21 @@ export default function PokemonList(props: Props) {
                 <th><THSort name="name">{dict.pokemons.attribute.name}</THSort></th>
                 <th>{dict.pokemons.attribute.type}</th>
                 <th className="text-center">{dict.pokemons.attribute.egg_group}</th>
-                <th className="text-end"><THSort name="hp">{dict.pokemons.attribute.hp}</THSort></th>
-                <th className="text-end"><THSort name="attack">{dict.pokemons.attribute.attack}</THSort></th>
-                <th className="text-end"><THSort name="defense">{dict.pokemons.attribute.defense}</THSort></th>
-                <th className="text-end"><THSort name="special_attack">{dict.pokemons.attribute.sp_attack}</THSort></th>
-                <th className="text-end"><THSort name="special_defense">{dict.pokemons.attribute.sp_defense}</THSort>
+                <th className="text-end"><THSort name="hp">{dict.pokemons.attribute.hp}</THSort>
                 </th>
-                <th className="text-end"><THSort name="speed">{dict.pokemons.attribute.speed}</THSort></th>
-                <th className="text-end"><THSort name="total">{dict.pokemons.attribute.total}</THSort></th>
+                <th className="text-end"><THSort
+                    name="attack">{dict.pokemons.attribute.attack}</THSort></th>
+                <th className="text-end"><THSort
+                    name="defense">{dict.pokemons.attribute.defense}</THSort></th>
+                <th className="text-end"><THSort
+                    name="special_attack">{dict.pokemons.attribute.sp_attack}</THSort></th>
+                <th className="text-end"><THSort
+                    name="special_defense">{dict.pokemons.attribute.sp_defense}</THSort>
+                </th>
+                <th className="text-end"><THSort
+                    name="speed">{dict.pokemons.attribute.speed}</THSort></th>
+                <th className="text-end"><THSort
+                    name="total">{dict.pokemons.attribute.total}</THSort></th>
                 <th aria-label="Action"/>
             </tr>
             </thead>
@@ -42,7 +49,10 @@ export default function PokemonList(props: Props) {
                 <tr key={pokemon.id}>
                     <td>{pokemon.id}</td>
                     <td>
-                        <div className="position-relative mx-auto" style={{width: '70px', height: '70px'}}>
+                        <div className="position-relative mx-auto" style={{
+                            width: '70px',
+                            height: '70px'
+                        }}>
                             <Image
                                 fill
                                 style={{objectFit: 'contain'}}
@@ -55,11 +65,13 @@ export default function PokemonList(props: Props) {
                     <td>{pokemon.name}</td>
                     <td>
                         {pokemon.types.map((type) => (
-                            <span key={type.id} className="me-2"><PokemonTypeLabel type={type}/></span>
+                            <span key={type.id} className="me-2"><PokemonTypeLabel
+                                type={type}/></span>
                         ))}
                     </td>
                     <td className="text-center" style={{whiteSpace: 'pre'}}>
-                        {pokemon.egg_groups.map((eggGroup) => eggGroup.name).join('\n')}
+                        {pokemon.egg_groups.map((eggGroup) => eggGroup.name)
+                            .join('\n')}
                     </td>
                     <td className="text-end">{pokemon.hp}</td>
                     <td className="text-end">{pokemon.attack}</td>

@@ -4,15 +4,27 @@ import {getDictionary} from '@/locales/dictionary'
 
 export const authOptions: NextAuthOptions = {
     callbacks: {
-        async jwt({user, token}) {
+        async jwt({
+                      user,
+                      token
+                  }) {
             if (user) {
-                return {...token, user: {...user as User}}
+                return {
+                    ...token,
+                    user: {...user as User}
+                }
             }
 
             return token
         },
-        async session({session, token}) {
-            return {...session, user: token.user}
+        async session({
+                          session,
+                          token
+                      }) {
+            return {
+                ...session,
+                user: token.user
+            }
         },
     },
     providers: [
@@ -25,7 +37,10 @@ export const authOptions: NextAuthOptions = {
                 if (!credentials) {
                     return null
                 }
-                const {username, password} = credentials
+                const {
+                    username,
+                    password
+                } = credentials
 
                 // Replace with real authentication here
                 const ok = username === 'Username' && password === 'Password'

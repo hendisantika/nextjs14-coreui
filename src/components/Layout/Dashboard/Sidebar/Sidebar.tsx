@@ -33,7 +33,8 @@ export default function Sidebar({children}: { children: React.ReactNode }) {
             })}
             id="sidebar"
         >
-            <div className="sidebar-brand d-none d-md-flex align-items-center justify-content-center">
+            <div
+                className="sidebar-brand d-none d-md-flex align-items-center justify-content-center">
                 <svg
                     className="sidebar-brand-full"
                     width="118"
@@ -63,7 +64,8 @@ export default function Sidebar({children}: { children: React.ReactNode }) {
                 type="button"
                 aria-label="sidebar toggler"
             >
-                <FontAwesomeIcon className="sidebar-toggler-chevron" icon={faAngleLeft} fontSize={24}/>
+                <FontAwesomeIcon className="sidebar-toggler-chevron" icon={faAngleLeft}
+                                 fontSize={24}/>
             </Button>
         </div>
     )

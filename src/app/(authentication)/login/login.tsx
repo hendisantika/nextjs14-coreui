@@ -33,7 +33,11 @@ export default function Login({callbackUrl}: { callbackUrl: string }) {
                 return
             }
 
-            const {ok, url, error: err} = res
+            const {
+                ok,
+                url,
+                error: err
+            } = res
 
             if (!ok) {
                 if (err) {

@@ -36,11 +36,13 @@ export default async function SidebarNav() {
             </SidebarNavItem>
             <SidebarNavItem icon={faCode} href="/pokemons">
                 {dict.sidebar.items.sample}
-                <small className="ms-auto"><Badge bg="danger" className="ms-auto">DEMO</Badge></small>
+                <small className="ms-auto"><Badge bg="danger"
+                                                  className="ms-auto">DEMO</Badge></small>
             </SidebarNavItem>
             <SidebarNavTitle>{dict.sidebar.items.theme}</SidebarNavTitle>
             <SidebarNavItem icon={faDroplet} href="#">{dict.sidebar.items.colors}</SidebarNavItem>
-            <SidebarNavItem icon={faPencil} href="#">{dict.sidebar.items.typography}</SidebarNavItem>
+            <SidebarNavItem icon={faPencil}
+                            href="#">{dict.sidebar.items.typography}</SidebarNavItem>
             <SidebarNavTitle>{dict.sidebar.items.components}</SidebarNavTitle>
 
             <SidebarNavGroup toggleIcon={faPuzzlePiece} toggleText={dict.sidebar.items.base}>
@@ -101,8 +103,10 @@ export default async function SidebarNav() {
             <SidebarNavTitle>{dict.sidebar.items.extras}</SidebarNavTitle>
 
             <SidebarNavGroup toggleIcon={faStar} toggleText={dict.sidebar.items.pages}>
-                <SidebarNavItem icon={faRightToBracket} href="login">{dict.sidebar.items.login}</SidebarNavItem>
-                <SidebarNavItem icon={faAddressCard} href="register">{dict.sidebar.items.register}</SidebarNavItem>
+                <SidebarNavItem icon={faRightToBracket}
+                                href="login">{dict.sidebar.items.login}</SidebarNavItem>
+                <SidebarNavItem icon={faAddressCard}
+                                href="register">{dict.sidebar.items.register}</SidebarNavItem>
                 <SidebarNavItem icon={faBug} href="#">{dict.sidebar.items.error404}</SidebarNavItem>
                 <SidebarNavItem icon={faBug} href="#">{dict.sidebar.items.error500}</SidebarNavItem>
             </SidebarNavGroup>

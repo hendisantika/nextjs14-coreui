@@ -32,7 +32,11 @@ export default function Register() {
                 return
             }
 
-            const {ok, url, error: err} = res
+            const {
+                ok,
+                url,
+                error: err
+            } = res
 
             if (!ok) {
                 if (err) {
@@ -58,7 +62,8 @@ export default function Register() {
 
     return (
         <>
-            <Alert variant="danger" show={error !== ''} onClose={() => setError('')} dismissible>{error}</Alert>
+            <Alert variant="danger" show={error !== ''} onClose={() => setError('')}
+                   dismissible>{error}</Alert>
             <Form onSubmit={register}>
                 <InputGroup className="mb-3">
                     <InputGroupText><FontAwesomeIcon icon={faUser} fixedWidth/></InputGroupText>
@@ -109,7 +114,8 @@ export default function Register() {
                     />
                 </InputGroup>
 
-                <Button type="submit" className="d-block w-100" disabled={submitting} variant="success">
+                <Button type="submit" className="d-block w-100" disabled={submitting}
+                        variant="success">
                     {dict.signup.form.submit}
                 </Button>
             </Form>

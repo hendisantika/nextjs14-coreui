@@ -8,7 +8,11 @@ type Props = {
 }
 
 export default function Summary(props: Props) {
-    const {total, from, to} = props
+    const {
+        total,
+        from,
+        to
+    } = props
 
     const dict = useDictionary()
 

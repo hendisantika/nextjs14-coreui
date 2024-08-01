@@ -44,15 +44,16 @@ export default function Index(props: Props) {
     url.searchParams.set('_sort', sort)
     url.searchParams.set('_order', order)
 
-    const fetcher = (...args: Parameters<typeof fetch>) => fetch(...args).then(async (res) => {
-        if (res.ok) {
-            const pokemons: Pokemon[] = await res.json()
-            const total = Number(res.headers.get('x-total-count')) ?? 0
-            return newResource(pokemons, total, page, perPage)
-        }
+    const fetcher = (...args: Parameters<typeof fetch>) => fetch(...args)
+        .then(async (res) => {
+            if (res.ok) {
+                const pokemons: Pokemon[] = await res.json()
+                const total = Number(res.headers.get('x-total-count')) ?? 0
+                return newResource(pokemons, total, page, perPage)
+            }
 
-        return pokemonResourceFallback
-    })
+            return pokemonResourceFallback
+        })
 
     const {data: pokemonResource} = useSWR(url.toString(), fetcher, {
         fallbackData: pokemonResourceFallback,
